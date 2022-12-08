@@ -1,6 +1,7 @@
 #pragma once
 #include "sqlite/sqlite3.h"
 #include <iostream>
+#include <string>
 using namespace std;
 #ifndef _DATABASE_H_
 #define _DATABASE_H_
@@ -14,6 +15,8 @@ namespace insertdb {
 		string data;
 		string idUser;
 		string idNote;
+		const string quote = "\'";
+		
 	public:
 		 string SEdata;
 		 void insertDataUser(string name, string email, string password);

@@ -1,7 +1,10 @@
 #include <iostream>
 #include "SecuritySystem.h"
 
+#include <string>
 using namespace std;
+
+
 
 int main()
 {
@@ -20,6 +23,36 @@ int main()
     string email;
     string password;
     string tempPass;
+    const string quote = "\'";
+
+
+
+
+
+    /*
+    sqlite3* DB;
+    char* messaggeError;
+    const char* s = "E:\\Projects\\Security-System\\Security-System\\DB\\DATABASE.db";
+    int exit = sqlite3_open(s, &DB);
+
+    string sql("INSER INTO Users (name, email, password) VALUES (" + quote + name + quote + ", " + quote + email + quote + ", " + quote + password + quote + ");");
+    cout << sql;
+    //string sql("INSERT INTO Users (name, email, password) VALUES('Adam', 'GATES@gmail.com', '40');");
+
+    exit = sqlite3_exec(DB, sql.c_str(), NULL, 0, &messaggeError);
+    if (exit != SQLITE_OK) {
+        std::cerr << "Error Insert" << std::endl;
+        sqlite3_free(messaggeError);
+    }
+    else
+        std::cout << "Records created Successfully!" << std::endl;
+*/
+
+
+
+
+
+
 
     switch (choice) {
     case 'l':
@@ -44,7 +77,6 @@ int main()
         cout << "Invaild Input!!" << endl;
         break;
     }
-
     return 0;
 }
 
